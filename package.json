@@ -1,0 +1,54 @@
+{
+  "name": "@birbalkr/buildui",
+  "version": "1.0.5",
+  "description": "BuildUI is a collection of reusable React + TypeScript + Tailwind CSS UI components, animations, layouts, and interaction patterns.",
+  "license": "MIT",
+  "type": "module",
+  "main": "./dist/index.js",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "sideEffects": [
+    "**/*.css"
+  ],
+  "keywords": [
+  "react",
+  "typescript",
+  "tailwindcss",
+  "ui",
+  "components",
+  "button",
+  "component-library"
+],
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js",
+      "require": "./dist/index.cjs"
+    }
+  },
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "npm run build:css && npm run build:js",
+    "build:css": "tailwindcss -i ./src/styles.css -o ./src/styles.compiled.css --minify",
+    "build:js": "tsup",
+    "dev": "tsup --watch",
+    "typecheck": "tsc --noEmit",
+    "prepublishOnly": "npm run build"
+  },
+  "peerDependencies": {
+    "react": ">=18",
+    "react-dom": ">=18"
+  },
+  "devDependencies": {
+    "@tailwindcss/cli": "^4.0.0",
+    "@types/react": "^18.3.0",
+    "@types/react-dom": "^18.3.0",
+    "react": "^18.3.0",
+    "react-dom": "^18.3.0",
+    "tailwindcss": "^4.0.0",
+    "tsup": "^8.3.0",
+    "typescript": "^5.6.3"
+  }
+}
