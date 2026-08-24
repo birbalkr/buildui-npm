@@ -31,6 +31,7 @@ export const Input = ({
 
             <input
                 id={id}
+                placeholder={`Enter your ${props.placeholder || label}`}
                 className={`rounded-md border ${sizeClasses[size]
                     } ${error ? "border-red-500" : "border-gray-300"
                     } focus:outline-none focus:ring-2 focus:ring-blue-500 ${className}`}
