@@ -1,6 +1,6 @@
 {
   "name": "@birbalkr/buildui",
-  "version": "1.0.5",
+  "version": "1.0.6",
   "description": "BuildUI is a collection of reusable React + TypeScript + Tailwind CSS UI components, animations, layouts, and interaction patterns.",
   "license": "MIT",
   "type": "module",
