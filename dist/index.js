@@ -62,24 +62,22 @@ var sizeClasses2 = {
 };
 var Input = ({
   label,
-  error,
   size = "md",
   className = "",
   id,
   ...props
 }) => {
-  return /* @__PURE__ */ jsxs("div", { className: "flex flex-col", children: [
-    label && /* @__PURE__ */ jsx2("label", { htmlFor: id, className: "mb-1 font-medium", children: label }),
+  return /* @__PURE__ */ jsxs("div", { className: "flex flex-col pt-10", children: [
+    label && /* @__PURE__ */ jsx2("label", { htmlFor: id, className: "mb-1 text-sm font-bold text-gray-700", children: label.toUpperCase() }),
     /* @__PURE__ */ jsx2(
       "input",
       {
         id,
         placeholder: `Enter your ${props.placeholder || label}`,
-        className: `rounded-md border ${sizeClasses2[size]} ${error ? "border-red-500" : "border-gray-300"} focus:outline-none focus:ring-2 focus:ring-blue-500 ${className}`,
+        className: `rounded-md border outline-none ${sizeClasses2[size]} ${className}`,
         ...props
       }
-    ),
-    error && /* @__PURE__ */ jsx2("span", { className: "mt-1 text-sm text-red-500", children: error })
+    )
   ] });
 };
 export {
